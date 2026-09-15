@@ -55,7 +55,7 @@ public class SceneCtrl : MonoBehaviour
     {
         StartCoroutine(SettingExposure(true));
         yield return new WaitForSeconds(exposureSettingInterval);
-        
+        SceneManager.LoadScene(sceneBuildIndex);
         StartCoroutine(SettingExposure(false));
     }
     
@@ -67,6 +67,7 @@ public class SceneCtrl : MonoBehaviour
     public void CaricaGioco()
     {
         SceneManager.LoadScene(sceneBuildIndex:1);
+        //ToCubeScene(); // funziona ma bisogna gestire il fatto che aspetta exposureSettingInterval secondi prima di aprire la scene
     }
 
     public void ChiudiGioco()
