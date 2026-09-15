@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class SceneCtrl : MonoBehaviour
 {
    
 
@@ -16,6 +16,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
     }
 
+    public void ToSphereScene()
+    {
+        SceneManager.LoadScene(sceneBuildIndex:2);
+    }
+
+    public void ToCubeScene()
+    {
+        SceneManager.LoadScene(sceneBuildIndex:1);
+    }
+    
     public void CaricaGioco()
         {
             SceneManager.LoadScene(sceneBuildIndex:1);
