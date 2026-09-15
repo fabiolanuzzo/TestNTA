@@ -28959,6 +28959,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b520f3c5bb52fc4aad036995783ce6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  skyboxMaterial: {fileID: 2100000, guid: 96bb60f6ae99b91498f46a833d286671, type: 2}
+  exposureSettingInterval: 2
+  minExposure: 1
+  maxExposure: 4
 --- !u!4 &1336731330
 Transform:
   m_ObjectHideFlags: 0
@@ -38283,6 +38287,7 @@ GameObject:
   - component: {fileID: 1819222616}
   - component: {fileID: 1819222615}
   - component: {fileID: 1819222617}
+  - component: {fileID: 1819222618}
   m_Layer: 0
   m_Name: GameCtrl
   m_TagString: Untagged
@@ -38332,6 +38337,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   UIPrefab: {fileID: 2886039629296756436, guid: 5d3a3fc5086f0411398fc9a1b9bb3568, type: 3}
+--- !u!114 &1819222618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819222614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824bcec6a196b49ca850e6316c9fffa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  initialWait: 60
+  showInterval: 10
+  closeInterval: 2.5
+  minInterval: 1
+  uiHandler: {fileID: 1819222617}
+  messages:
+  - Primo messaggio
+  - Secondo messaggio, preparati
+  - Lascia perdere
 --- !u!1 &1819274263
 GameObject:
   m_ObjectHideFlags: 0
@@ -45735,6 +45761,7 @@ GameObject:
   - component: {fileID: 2109813023}
   - component: {fileID: 2109813021}
   - component: {fileID: 2109813022}
+  - component: {fileID: 2109813024}
   m_Layer: 0
   m_Name: ToSphere_Trigger
   m_TagString: Untagged
@@ -45777,19 +45804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   OnEnter:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1336731329}
-        m_TargetAssemblyTypeName: NewMonoBehaviourScript, Assembly-CSharp
-        m_MethodName: ToSphereScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnExit:
     m_PersistentCalls:
       m_Calls: []
@@ -45808,6 +45823,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2109813024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109813020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3eece2abc3834b90a781d8d29689e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FindSceneCtrl
+  eventHandler: {fileID: 2109813022}
+  targetScene: sfere
 --- !u!1 &2121799749
 GameObject:
   m_ObjectHideFlags: 0

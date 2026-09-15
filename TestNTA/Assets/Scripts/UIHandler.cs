@@ -8,6 +8,10 @@ public class UIHandler : MonoBehaviour
     
     public void OpenUI(string text)
     {
+        if (currentUI)
+        {
+            Destroy(currentUI);
+        }
         currentUI = Instantiate(UIPrefab, transform.position, Quaternion.identity);
         currentUI.GetComponentInChildren<TextMeshProUGUI>().text = text;
     }
@@ -16,6 +20,7 @@ public class UIHandler : MonoBehaviour
     {
         currentUI.GetComponentInChildren<TextMeshProUGUI>().text = "";
         Destroy(currentUI);
+        currentUI = null;
     }
 
     // Update is called once per frame

@@ -1079,6 +1079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b520f3c5bb52fc4aad036995783ce6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  skyboxMaterial: {fileID: 2100000, guid: 96bb60f6ae99b91498f46a833d286671, type: 2}
+  exposureSettingInterval: 2
+  minExposure: 1
+  maxExposure: 4
 --- !u!4 &1999597264
 Transform:
   m_ObjectHideFlags: 0
